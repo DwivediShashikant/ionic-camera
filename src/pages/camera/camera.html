@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>camera</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-button full (click) = 'takeSnapShot()'>
+    Take Snapshot
+  </button>
+
+  <ion-card *ngIf = 'imgSrc'>
+    <img [src] = 'imgSrc'>
+  </ion-card>
+</ion-content>

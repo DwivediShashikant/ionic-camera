@@ -3,14 +3,15 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { Camera } from '@ionic-native/camera'
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { CameraPage} from '../pages'; 
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    CameraPage
   ],
   imports: [
     BrowserModule,
@@ -19,12 +20,13 @@ import { HomePage } from '../pages/home/home';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    CameraPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    Camera
   ]
 })
 export class AppModule {}
