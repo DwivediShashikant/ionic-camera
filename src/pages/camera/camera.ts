@@ -36,5 +36,4 @@ export class CameraPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad CameraPage');
   }
-
 }
